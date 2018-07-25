@@ -31,7 +31,8 @@ function draw() {
 	// PLOT COMMAND:
 	//foo.plot({type: 'point', data: lukecrap, xkey: 'stuff', ykey: 'things'});
 	//foo.plot({ data: mpg, xkey: 'year', ykey: 'displ' });
-	foo.plot({ type: 'line', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 });
+	//foo.plot({ type: 'alex', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 1 }, mylook);
+	foo.plot({ type: 'sally', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 1 }, crazygrid);
 	//foo.plot({ type: 'line', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, mylook); // custom look
 	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
 	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] }, crazygrid);
