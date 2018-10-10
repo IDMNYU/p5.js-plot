@@ -34,9 +34,9 @@ function draw() {
 	// PLOT COMMAND:
 	//foo.plot({type: 'point', data: lukecrap, xkey: 'stuff', ykey: 'things'});
 	//foo.plot({ data: mpg, xkey: 'year', ykey: 'displ' }); // default line
-	//foo.plot({ type: 'density', data: myData, xkey: 'x', ykey: 'y', strokeweight: 5});
+	foo.plot({ type: 'density', data: economics, xkey: 'pop', strokeweight: 5});
 	//foo.plot({ type: 'box', data: economics, xkey: 'pop', strokeweight: 5});
-  foo.plot({ type: 'histogram', data: economics, xkey: 'pop', strokeweight: 5});
+  //foo.plot({ type: 'histogram', data: economics, xkey: 'pop', strokeweight: 5});
   //foo.plot({ type: 'box', data: mpg, xkey: 'displ', ykey: 'year', strokeweight: 5});
   //foo.plot({ type: 'box', data: diamonds, xkey: 'price', ykey: 'clarity', strokeweight: 1});
 	//foo.plot({ type: 'box', data: boxData, xkey: 'x', ykey: 'y', strokeweight: 5});
