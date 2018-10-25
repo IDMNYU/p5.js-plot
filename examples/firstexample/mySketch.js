@@ -29,13 +29,9 @@ function setup() {
   //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
 	//foo = new p5.Plot({ left: 100, top: 100, right: 400, bottom: 200, backgroundcolor: 'lightBlue' });
 
-	//noLoop();
-}
-
-function draw() {
+//	noLoop();
   background(255);
-
-	// PLOT COMMAND:
+  // PLOT COMMAND:
   //foo.plot({type: 'line', data: lukecrap, xkey: 'stuff', ykey: 'things'});
 	//foo.plot({type: 'point', data: lukecrap, xkey: 'stuff', ykey: 'things'});
 	//foo.plot({ data: mpg, xkey: 'year', ykey: 'displ' }); // default line
@@ -46,8 +42,13 @@ function draw() {
   //foo.plot({ type: 'box', data: diamonds, xkey: 'price', ykey: 'clarity', strokeweight: 1});
 	//foo.plot({ type: 'box', data: boxData, xkey: 'x', ykey: 'y', strokeweight: 5});
 	//foo.plot({ type: 'area', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, mylook); // custom look
-	foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
+ //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
+ foo.plot({ type: 'point', data: mpg, xkey: 'cty', ykey: 'hwy'});
 	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] }, crazygrid);
+}
 
+function draw() {
+  background(255);
+  foo.redraw();
   foo.hover(mouseX, mouseY);
 }
