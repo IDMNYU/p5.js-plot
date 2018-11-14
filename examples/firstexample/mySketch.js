@@ -2,7 +2,7 @@ var dfile, diamonds; // load from JSON
 
 var foo; // p5.Plot() object
 
-var mylook = {strokecolor: [255, 0, 255], fillcolor: [0, 255, 0], background: false};
+var mylook = {strokecolor: [255, 0, 255], fillcolor: [0, 255, 0]};
 var crazygrid = {rows: 50, cols: 50, backgroundcolor: 'Black', gridcolor: 'White'};
 
 var lukecrap = [{stuff: 50, things: 20}, {stuff: 55, things: 33}, {stuff: 33, things: 45}];
@@ -20,8 +20,6 @@ function setup() {
 	background(255);
 
 	diamonds = JSON.parse(dfile);
-
-
   // mix and match:
 
 	// CONSTRUCTOR:
@@ -32,25 +30,41 @@ function setup() {
   //noLoop();
   background(255);
   // PLOT COMMAND:
-  foo.plot({type: 'pie', data: pieData, xkey:'x'});
-  //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
+  // LINE
+  //foo.plot({ data: mpg, xkey: 'year', ykey: 'displ' }); // default line
   //foo.plot({type: 'line', data: lukecrap, xkey: 'stuff', ykey: 'things'});
-	//foo.plot({type: 'point', data: lukecrap, xkey: 'stuff', ykey: 'things'});
-	//foo.plot({ data: mpg, xkey: 'year', ykey: 'displ' }); // default line
-	//foo.plot({ type: 'density', data: economics, xkey: 'pop', strokeweight: 5});
+
+  // POINT
+  //foo.plot({type: 'point', data: lukecrap, xkey: 'stuff', ykey: 'things'});
+  //foo.plot({ type: 'point', data: mpg, xkey: 'cty', ykey: 'hwy'});
+  //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
+  //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
+	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] }, crazygrid);
+
+  // AREA
+  //foo.plot({ type: 'area', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, mylook); // custom look
+
+  // PIE
+  //foo.plot({type: 'pie', data: pieData, xkey:'x', background: false});
+
+  // BOX
 	//foo.plot({ type: 'box', data: economics, xkey: 'pop', strokeweight: 5});
-  //foo.plot({ type: 'histogram', data: economics, xkey: 'pop', strokeweight: 5});
   //foo.plot({ type: 'box', data: mpg, xkey: 'displ', ykey: 'year', strokeweight: 5});
   //foo.plot({ type: 'box', data: diamonds, xkey: 'price', ykey: 'clarity', strokeweight: 1});
 	//foo.plot({ type: 'box', data: boxData, xkey: 'x', ykey: 'y', strokeweight: 5});
-	//foo.plot({ type: 'area', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, mylook); // custom look
-  //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
-  //foo.plot({ type: 'point', data: mpg, xkey: 'cty', ykey: 'hwy'});
-	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] }, crazygrid);
+
+  // not yet.....................................................................
+  // DENSITY
+  //foo.plot({ type: 'density', data: economics, xkey: 'pop', strokeweight: 5});
+
+  // HISTOGRAM
+  foo.plot({ type: 'histogram', data: economics, xkey: 'pop', strokeweight: 5});
+
 }
 
 function draw() {
   background(255);
   foo.redraw();
-  foo.hover(mouseX, mouseY);
+  //foo.hover(mouseX, mouseY);
+  foo.hoverHistogram(mouseX, mouseY);
 }
