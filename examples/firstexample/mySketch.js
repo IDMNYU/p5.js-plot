@@ -3,6 +3,8 @@ var dfile, diamonds; // load from JSON
 var foo; // p5.Plot() object
 
 var mylook = {strokecolor: [255, 0, 255], fillcolor: [0, 255, 0]};
+var myotherlook = {strokecolor: [0, 0, 255], fillcolor: [128, 128, 0]};
+var mythirdlook = {backgroundcolor: 'Black', gridcolor: 'White'};
 var crazygrid = {rows: 50, cols: 50, backgroundcolor: 'Black', gridcolor: 'White'};
 
 var lukecrap = [{stuff: 50, things: 20}, {stuff: 55, things: 33}, {stuff: 33, things: 45}];
@@ -14,6 +16,9 @@ var pieData = [{"x":13, "y":"a"}, {"x":16, "y":"b"}, {"x":57, "y":"c"}, {"x":34,
 function preload() {
 	dfile = loadStrings('diamonds.json'); // load the big file
 }
+
+var stylelist = [mylook, myotherlook, mythirdlook];
+var whichstyle = 0;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
@@ -42,7 +47,7 @@ function setup() {
 	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] }, crazygrid);
 
   // AREA
-  //foo.plot({ type: 'area', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, mylook); // custom look
+  foo.plot({ type: 'area', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, stylelist[whichstyle]); // custom look
 
   // PIE
   //foo.plot({type: 'pie', data: pieData, xkey:'x', background: false});
@@ -58,13 +63,19 @@ function setup() {
   //foo.plot({ type: 'density', data: economics, xkey: 'pop', strokeweight: 5});
 
   // HISTOGRAM
-  foo.plot({ type: 'histogram', data: economics, xkey: 'pop', strokeweight: 5});
+  //foo.plot({ type: 'histogram', data: economics, xkey: 'pop', strokeweight: 5});
 
 }
 
 function draw() {
-  background(255);
-  foo.redraw();
-  //foo.hover(mouseX, mouseY);
-  foo.hoverHistogram(mouseX, mouseY);
+  //background(255);
+  //foo.redraw();
+  //foo.hover(mouseX, mouseY, 'point');
+  //foo.hover(mouseX, mouseY, 'bin');
+}
+
+function keyPressed() {
+  whichstyle = (whichstyle+1)%stylelist.length;
+  foo.plot(stylelist[whichstyle]);
+
 }
