@@ -1,10 +1,12 @@
 let foo; // p5.Plot() object
+let minBinNum = 2;
+let maxBinNum = 30;
 let binNum = 2;
 let slider;
 
 function setup(){
 	createCanvas(windowWidth, windowHeight);
-  slider = createSlider(2, 20, 1);
+  slider = createSlider(minBinNum, maxBinNum, 1);
   slider.position(100, 100);
   slider.style('width', '80px');
   slider.changed(changeBin);
@@ -20,6 +22,7 @@ function setup(){
 
 function draw() {
   background(255);
+  text('current bin number: '+ binNum, 100, 80)
   foo.redraw();
   foo.hover(mouseX, mouseY, 'bin');
 }
