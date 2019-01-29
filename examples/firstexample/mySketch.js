@@ -14,7 +14,7 @@ var boxData = [{"x":13, "y":"a"}, {"x":16, "y":"a"}, {"x":57, "y":"a"}, {"x":34,
 var pieData = [{"x":13, "y":"a"}, {"x":16, "y":"b"}, {"x":57, "y":"c"}, {"x":34, "y":"d"}];
 
 function preload() {
-	dfile = loadStrings('diamonds.json'); // load the big file
+	dfile = loadStrings('../../support/diamonds.json'); // load the big file
 }
 
 var stylelist = [mylook, myotherlook, mythirdlook];
