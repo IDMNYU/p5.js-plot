@@ -10,8 +10,8 @@ function setup() {
 	// CONSTRUCTOR:
 	foo = new p5.Plot({ left: width*0.2, top: height*0.3, right: width*0.8, bottom: height*0.7 });
 
-	foo.plot({ type: 'box', data: economics, ykey: 'pop', strokeweight: 1});
-  //foo.plot({ type: 'box', data: mpg, xkey: 'year', ykey: 'displ', strokeweight: 2});
+	//foo.plot({ type: 'box', data: economics, xkey: null, ykey: 'pop', strokeweight: 1});
+  foo.plot({ type: 'box', data: mpg, xkey: 'year', ykey: 'displ', strokeweight: 2});
 	//foo.plot({ type: 'box', data: boxData, xkey: 'y', ykey: 'x', strokeweight: 2});
 
 }
