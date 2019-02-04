@@ -87,13 +87,20 @@ Number of bins to group the datasets.
 {type: 'pie'}
 
 ### Functions
-- redraw()
+-
+```
+redraw()
+```
+
 Put this in draw to use the hover function.
 Example:
 ```
 foo.redraw()
 ```
-- hover()
+-
+```
+hover()
+```
 
 Now supports point graph, line graph and histogram.
 Example:
