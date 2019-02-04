@@ -10,22 +10,18 @@ function setup() {
 	background(255);
 
 	// CONSTRUCTOR:
-	foo = new p5.Plot(); // easy
+	foo = new p5.Plot({left: width*0.2, top: height*0.3, right: width*0.8, bottom: height*0.7});
 
   //noLoop();
   background(255);
 
   // PLOT COMMAND:
   // LINE
-  foo.plot({ type: 'point', data: d});
-
-
+  foo.plot({ type: 'point', data: e});
 }
 
 function draw() {
   background(255);
   foo.redraw();
-}
-
-function keyPressed() {
+	foo.hover(mouseX, mouseY, 'point');
 }
