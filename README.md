@@ -85,3 +85,19 @@ Number of bins to group the datasets.
 - Pie chart
 
 {type: 'pie'}
+
+### Functions
+- redraw()
+Put this in draw to use the hover function.
+Example:
+```
+foo.redraw()
+```
+- hover()
+
+Now supports point graph, line graph and histogram.
+Example:
+```
+foo.hover(mouseX, mouseY, 'point');
+foo.hover(mouseX, mouseY, 'bin');
+```
