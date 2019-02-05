@@ -17,7 +17,7 @@ function setup() {
 
   // PLOT COMMAND:
   // LINE
-  foo.plot({ type: 'point', data: e});
+  foo.plot({ type: 'line', data: e});
 }
 
 function draw() {
