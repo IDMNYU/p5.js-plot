@@ -2,6 +2,18 @@
 p5.plot!
 
 ## Documentation
+### JSONs
+```
+// to use existing datasets
+var diamonds, mpg, seals, economics;
+
+function preload() {
+	diamonds = loadJSON("https://raw.githubusercontent.com/IDMNYU/p5.js-plot/master/support/diamonds.json");
+	seals = loadJSON("https://raw.githubusercontent.com/IDMNYU/p5.js-plot/master/support/seals.json");
+	mpg = loadJSON("https://raw.githubusercontent.com/IDMNYU/p5.js-plot/master/support/mpg.json");
+	economics = loadJSON("https://raw.githubusercontent.com/IDMNYU/p5.js-plot/master/support/economics.json");
+}
+```
 ### Getting Started
 ```
 // initiate a variable
