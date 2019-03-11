@@ -16,7 +16,7 @@ function setup() {
 
   // PLOT COMMAND:
   // DENSITY
-  foo.plot({ type: 'density', data: economics, xkey: 'pop', strokeweight: 3, pointdiameter: 5});
+  foo.plot({ type: 'density', data: economics, xkey: 'pop', ykey: null, strokeweight: 3, pointdiameter: 5});
 }
 
 function draw() {

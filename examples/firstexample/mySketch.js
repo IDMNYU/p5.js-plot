@@ -15,6 +15,8 @@ var pieData = [{"x":13, "y":"a"}, {"x":16, "y":"b"}, {"x":57, "y":"c"}, {"x":34,
 
 function preload() {
 	dfile = loadStrings('../../support/diamonds.json'); // load the big file
+  //diamonds = loadJSON("https://raw.githubusercontent.com/IDMNYU/p5.js-plot/master/support/diamonds.json");
+  console.log(diamonds);
 }
 
 var stylelist = [mylook, myotherlook, mythirdlook];
@@ -38,14 +40,14 @@ function setup() {
   // LINE
   //foo.plot({data: mpg, xkey: 'year', ykey: 'displ', strokeweight: 5}); // default line
   //foo.plot({type: 'line', data: lukecrap, xkey: 'stuff', ykey: 'things'});
-  foo.plot({ type: 'line', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, stylelist[whichstyle]);
+  //foo.plot({ type: 'line', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, stylelist[whichstyle]);
 
   // POINT
   //foo.plot({type: 'point', data: mpg, xkey: 'year', ykey: 'displ', strokeweight: 5});
   //foo.plot({type: 'point', data: lukecrap, xkey: 'stuff', ykey: 'things', strokeweight: 5}, stylelist[whichstyle]);
   //foo.plot({ type: 'point', data: economics, xkey: 'pop', ykey: 'unemploy', strokeweight: 5 }, stylelist[whichstyle]);
   //foo.plot({ type: 'point', data: mpg, xkey: 'cty', ykey: 'hwy'});
-  //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
+  foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
   //foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] });
 	//foo.plot({ type: 'point', data: diamonds, xkey: 'carat', ykey: 'price', strokecolor: [255, 0, 0, 32], fillcolor: [128, 128, 255, 32] }, crazygrid);
 

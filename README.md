@@ -68,7 +68,6 @@ The filling color of the graph.
 - pointdiameter
 
 The numeric value of the diameter of the points on the graph.
-- stat
 - bins
 
 Number of bins to group the datasets.
