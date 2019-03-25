@@ -78,21 +78,27 @@ Number of bins to group the datasets.
 - Line graph
 
 {type: 'line'}
+
 - Point graph
 
 {type: 'point'}
+
 - Area graph
 
 {type: 'area'}
-- Density graph
+
+- Density graph, one contineous variable
 
 {type: 'density'}
+
 - box and whisker plot
 
 {type: 'box'}
+
 - Histogram
 
-{type: 'histogram'}
+{type: 'histogram'}, one contineous variable
+
 - Pie chart
 
 {type: 'pie'}
