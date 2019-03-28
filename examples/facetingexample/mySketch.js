@@ -37,6 +37,7 @@ function draw() {
   background(255);
 	// BAR
   foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: 'q1', strokeweight: 5});
+	//foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: ['q1', 'q2', 'q3', 'q4', 'q5'], strokeweight: 5});
 
 	a = a+.1;
   foo.hover(mouseX, mouseY, 'point');
