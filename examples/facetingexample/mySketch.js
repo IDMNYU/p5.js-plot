@@ -4,7 +4,7 @@ var foo; // p5.Plot() object
 
 var bar = [{x: 50}, {x: 75}, {x: 33}];
 
-var a = 1;
+var a = 0.1;
 
 function preload() {
 }
@@ -36,7 +36,7 @@ function setup() {
 function draw() {
   background(255);
 	// BAR
-  foo.plot({ wtf: a, type: 'bar2', data: survey, xkey: 'q1', strokeweight: 5});
+  foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: 'q1', strokeweight: 5});
 
 	a = a+.1;
   foo.hover(mouseX, mouseY, 'point');
