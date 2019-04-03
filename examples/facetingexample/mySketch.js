@@ -26,20 +26,21 @@ function setup() {
 		survey.push(yikes);
 	}
 
+	console.log(survey);
 	// CONSTRUCTOR:
 	//foo = new p5.Plot(); // easy
 	foo = new p5.Plot({ left: width*0.2, top: height*0.3, right: width*0.8, bottom: height*0.7 });
 	//foo = new p5.Plot({ left: 100, top: 100, right: 400, bottom: 200, backgroundcolor: 'lightBlue' });
-
+	// BAR
+  //foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: 'q1', strokeweight: 5});
+	foo.plot({ type: 'line', data: survey, xkey: ['q1', 'q2', 'q3', 'q4'], ykey:"q5", strokeweight: 5});
 }
 
 function draw() {
   background(255);
-	// BAR
-  foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: 'q1', strokeweight: 5});
-	//foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: ['q1', 'q2', 'q3', 'q4', 'q5'], strokeweight: 5});
 
-	a = a+.1;
+
+	//a = a+.1;
   foo.hover(mouseX, mouseY, 'point');
   //foo.hover(mouseX, mouseY, 'bin');
 }
