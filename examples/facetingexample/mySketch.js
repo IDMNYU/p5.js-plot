@@ -33,7 +33,7 @@ function setup() {
 	//foo = new p5.Plot({ left: 100, top: 100, right: 400, bottom: 200, backgroundcolor: 'lightBlue' });
 	// BAR
   //foo.plot({ barwidth: a, type: 'bar2', data: survey, xkey: 'q1', strokeweight: 5});
-	foo.plot({ type: 'line', data: survey, xkey: ['q1', 'q2', 'q3', 'q4'], ykey:"q5", strokeweight: 5});
+	foo.plot({ type: 'line', data: survey, xkey: ['q1', 'q2', 'q3', 'q4'], ykey:"q5", strokeweight: [1, 2, 3, 4, 5, 6, 7], strokecolor:['red', 'green', 'blue']});
 }
 
 function draw() {
@@ -41,7 +41,7 @@ function draw() {
 
 
 	//a = a+.1;
-  foo.hover(mouseX, mouseY, 'point');
+  //foo.hover(mouseX, mouseY, 'point');
   //foo.hover(mouseX, mouseY, 'bin');
 }
 

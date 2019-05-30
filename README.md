@@ -119,3 +119,11 @@ Example:
 foo.hover(mouseX, mouseY, 'point');
 foo.hover(mouseX, mouseY, 'bin');
 ```
+## WORKING ON:
+- Fixing graphs by incorporating multiple xkey values and multiple colors
+(line graph, point graph done)
+
+
+## TO DO:
+- Fix hover function (a new way to add data in each graph function)
+- multiple xkeys AND multiple ykeys faceting
