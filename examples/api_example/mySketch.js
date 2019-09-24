@@ -16,7 +16,7 @@ function setup(){
   background(255);
   // CONSTRUCTOR:
   foo = new p5.Plot({left: width*0.2, top: height*0.3, right: width*0.8, bottom: height*0.7, fillcolor:[[255, 0, 0]], backgroundcolor:100, rows:0, cols:0 });
-  foo.plot({data: myData, type: 'point'});
+  foo.plot({data: myData, type: 'point', xkey: 'lat', ykey: 'long'});
 }
 
 function draw() {
