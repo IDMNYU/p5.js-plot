@@ -4,6 +4,8 @@ let foo;
 let x = -100;
 let y = 100;
 
+var mydiv;
+
 function preload(){
   earthquakes = loadJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson');
 }
@@ -19,7 +21,9 @@ function setup(){
   background(255);
   // CONSTRUCTOR:
   foo = new p5.Plot({data: myData, type: ['line', 'point'], xkey: 'lat', ykey: 'long'});
-
+  foo.plot();
+  mydiv = createDiv('').size(180,180);
+  mydiv.html('<svg width=\"180\" height=\"180\"><rect x=\"20\" y=\"20\" rx=\"20\" ry=\"20\" width=\"100\" height=\"100\" style=\"fill:lightgray; stroke:#1c87c9; stroke-width:4;\"/></svg>');
 }
 
 function draw() {
@@ -28,7 +32,8 @@ function draw() {
   x-=10;
   y+=10;
   //myData.push({lat:x,long:y});
-  foo.plot();
+
+  mydiv.position(mouseX, mouseY);
   //console.log(foo.plotData);
 }
 
