@@ -34,7 +34,7 @@ function draw() {
   x-=10;
   y+=10;
 
-  image(myPlot, 0, 0, myPlot.width, myPlot.height);
+  image(myPlot, 0, 0, myPlot.width/4, myPlot.height/4);
 
   //myData.push({lat:x,long:y});
 
