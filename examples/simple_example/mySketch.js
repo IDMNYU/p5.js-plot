@@ -24,17 +24,17 @@ function setup(){
   // CONSTRUCTOR:
   foo = new p5.Plot({data: myData, type: ['point', 'line'], xkey: 'lat', ykey: 'long'});
   myPlot = foo.plot();
-  console.log(myPlot.width + ' '+myPlot.height);
 }
 
 function draw() {
   //background(random()*255, random()*255, random()*255);
   background(200);
   text(frameRate().toFixed(2), width-50, 50);
-  x-=10;
-  y+=10;
+  //x-=10;
+  //y+=10;
 
-  image(myPlot, 0, 0, myPlot.width/4, myPlot.height/4);
+  foo.draw();
+
 
   //myData.push({lat:x,long:y});
 
