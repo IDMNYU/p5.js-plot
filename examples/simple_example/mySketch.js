@@ -22,7 +22,7 @@ function setup(){
   //console.log(myData);
 
   // CONSTRUCTOR:
-  foo = new p5.Plot({data: myData, type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
+  foo = new p5.Plot({data: myData, strokecolor: "#0000FF", type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
   myPlot = foo.plot();
 }
 
@@ -32,10 +32,10 @@ function draw() {
   text(frameRate().toFixed(2), width-50, 50);
   //x-=10;
   //y+=10;
-
+  // tint(0, 255, 0);
   // rect(0, 0, mouseX, mouseY);
   // foo.draw(0, 0, mouseX, mouseY);
-  rect(0, 0, width, height);
+  //rect(0, 0, width, height);
   foo.draw(0, 0, width, height);
 
   fill(255, 255, 255, 150);
