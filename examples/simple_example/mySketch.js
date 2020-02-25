@@ -22,7 +22,7 @@ function setup(){
   //console.log(myData);
 
   // CONSTRUCTOR:
-  foo = new p5.Plot({data: myData, strokecolor: "#0000FF", type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
+  foo = new p5.Plot({data: myData, strokecolor: [255, 0, 0], type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
   myPlot = foo.plot();
 }
 
