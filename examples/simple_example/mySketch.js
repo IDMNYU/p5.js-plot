@@ -23,9 +23,9 @@ function setup(){
   //console.log(myData);
 
   // CONSTRUCTOR:
-  //colorMode("HSV");
-  colorMode(HSB);
-  foo = new p5.Plot({data: myData, fillcolor: [120, 100, 75, 20], type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
+  colorMode(RGB);
+  //colorMode(HSL);
+  foo = new p5.Plot({data: myData, fillcolor: [180, 50, 50, 20], type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
   myPlot = foo.plot();
 }
 
