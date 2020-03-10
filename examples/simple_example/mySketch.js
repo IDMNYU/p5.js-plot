@@ -13,7 +13,8 @@ function preload(){
 
 function setup(){
   createCanvas(800, 400);
-  background(255);
+
+  background(255, 0, 0);
   for (let i=0; i< earthquakes.features.length; i++){
     let lat = earthquakes.features[i].geometry.coordinates[0];
     let long = earthquakes.features[i].geometry.coordinates[1];
@@ -23,7 +24,8 @@ function setup(){
 
   // CONSTRUCTOR:
   //colorMode("HSV");
-  foo = new p5.Plot({data: myData, fillcolor: [255, 0, 0, 20], type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
+  colorMode(HSB);
+  foo = new p5.Plot({data: myData, fillcolor: [120, 100, 75, 20], type: ['point', 'line'], xkey: 'lat', ykey: 'long', width: 500, height: 250});
   myPlot = foo.plot();
 }
 
