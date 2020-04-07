@@ -10,7 +10,7 @@ function setup(){
   background(255, 0, 0);
   //console.log(myData);
 
-  foo = new p5.Plot({data: myData, fillcolor: [180, 50, 50, 1], type: ['bar1'], xkey: 'letter', width: 500, height: 250});
+  foo = new p5.Plot({data: myData, fillcolor: [180, 50, 50, 200], type: ['bar1'], xkey: 'letter', width: 500, height: 250});
   myPlot = foo.plot();
 }
 
