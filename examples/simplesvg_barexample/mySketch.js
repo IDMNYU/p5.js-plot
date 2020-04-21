@@ -23,5 +23,4 @@ function draw() {
   background(200);
   text(frameRate().toFixed(2), width-50, 50);
   foo.draw(0, 0, width, height);
-
 }
